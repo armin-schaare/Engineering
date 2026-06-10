@@ -1,0 +1,34 @@
+{
+  "name": "engineering-plugins",
+  "description": "Software Engineering plugins maintained and used by itemis AG.",
+  "owner": {
+    "name": "Armin Schaare",
+    "email": "armin.schaare@itemis.com"
+  },
+  "plugins": [
+    {
+      "name": "git",
+      "description": "git related commands/skills",
+      "version": "1.0.0",
+      "author": {
+        "name": "Oksana Kamenetska",
+        "email": "okamenetska@itemis.com"
+      },
+      "source": "./plugins/git",
+      "category": "productivity",
+      "keywords": ["git", "commit"]
+    },
+    {
+      "name": "review",
+      "description": "Code review related commands/skills",
+      "version": "1.0.0",
+      "author": {
+        "name": "Armin Schaare",
+        "email": "armin.schaare@itemis.com"
+      },
+      "source": "./plugins/review",
+      "category": "productivity",
+      "keywords": ["review", "qa"]
+    }
+  ]
+}

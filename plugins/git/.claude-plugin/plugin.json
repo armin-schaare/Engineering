@@ -1,0 +1,9 @@
+{
+  "name": "git",
+  "description": "git related skills",
+  "version": "1.0.0",
+  "author": {
+    "name": "Oksana Kamenetska",
+    "email": "okamenetska@itemis.com"
+  }
+}
