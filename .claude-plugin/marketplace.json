@@ -1,5 +1,5 @@
 {
-  "name": "engineering-plugins",
+  "name": "engineering",
   "description": "Software Engineering plugins maintained and used by itemis AG.",
   "owner": {
     "name": "Armin Schaare",
@@ -21,7 +21,7 @@
     {
       "name": "review",
       "description": "Code review related commands/skills",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Armin Schaare",
         "email": "armin.schaare@itemis.com"
@@ -29,6 +29,18 @@
       "source": "./plugins/review",
       "category": "productivity",
       "keywords": ["review", "qa"]
+    },
+    {
+      "name": "caveman",
+      "description": "Enable caveman mode by default",
+      "version": "1.0.3",
+      "author": {
+        "name": "Armin Schaare",
+        "email": "armin.schaare@itemis.com"
+      },
+      "source": "./plugins/caveman",
+      "category": "productivity",
+      "keywords": ["token", "brevity"]
     }
   ]
 }
