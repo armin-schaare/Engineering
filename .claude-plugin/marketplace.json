@@ -8,8 +8,8 @@
   "plugins": [
     {
       "name": "git",
-      "description": "git related commands/skills",
-      "version": "1.0.0",
+      "description": "git related skills",
+      "version": "1.0.2",
       "author": {
         "name": "Oksana Kamenetska",
         "email": "okamenetska@itemis.com"
@@ -20,8 +20,8 @@
     },
     {
       "name": "review",
-      "description": "Code review related commands/skills",
-      "version": "1.0.1",
+      "description": "Code review related skills",
+      "version": "1.0.2",
       "author": {
         "name": "Armin Schaare",
         "email": "armin.schaare@itemis.com"
@@ -33,7 +33,7 @@
     {
       "name": "caveman",
       "description": "Enable caveman mode by default",
-      "version": "1.0.3",
+      "version": "1.0.4",
       "author": {
         "name": "Armin Schaare",
         "email": "armin.schaare@itemis.com"
