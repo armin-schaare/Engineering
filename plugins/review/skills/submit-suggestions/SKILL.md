@@ -105,51 +105,20 @@ glab api "projects/<encoded-path>/merge_requests/<ID>" \
 
 ### Compute line_code
 
-```python
-import hashlib
+```bash
 # Added line (+):   old_line=0,      new_line=<line in new file>
 # Deleted line (-): old_line=<line>, new_line=0
 # Context line:     old_line=<line>, new_line=<line>
-h = hashlib.sha1(file_path.encode()).hexdigest()
-line_code = f"{h}_{old_line}_{new_line}"
-```
-
-Or via one-liner:
-```bash
-python3 -c "import hashlib,sys; p=sys.argv[1]; print(hashlib.sha1(p.encode()).hexdigest()+'_'+sys.argv[2]+'_'+sys.argv[3])" <file_path> <old_line> <new_line>
+${CLAUDE_PLUGIN_ROOT}/scripts/line_code.py <file_path> <old_line> <new_line>
 ```
 
 ### Post inline comment
 
-Always use `--input` with a JSON file and `-H "Content-Type: application/json"`. Using `--field` for nested position data silently posts a plain note instead of an inline comment.
-
 ```bash
-cat > /tmp/gl_comment.json << EOF
-{
-  "body": $(python3 -c "import json,sys; print(json.dumps(sys.argv[1]))" "<body>"),
-  "position": {
-    "position_type": "text",
-    "base_sha": "<base_sha>",
-    "start_sha": "<start_sha>",
-    "head_sha": "<head_sha>",
-    "old_path": "<file_path>",
-    "new_path": "<file_path>",
-    "new_line": <new_line>,
-    "line_range": {
-      "start": { "line_code": "<line_code>", "type": "new", "new_line": <new_line> },
-      "end":   { "line_code": "<line_code>", "type": "new", "new_line": <new_line> }
-    }
-  }
-}
-EOF
-
-glab api "projects/<encoded-path>/merge_requests/<ID>/discussions" \
-  --method POST \
-  --input /tmp/gl_comment.json \
-  -H "Content-Type: application/json"
+${CLAUDE_PLUGIN_ROOT}/scripts/post_gl_discussion.sh \
+  <encoded-path> <mr-id> "<body>" \
+  <base_sha> <start_sha> <head_sha> \
+  <file_path> <new_line> <line_code>
 ```
 
-If inline positioning fails, fall back to a file-level note:
-```bash
-glab mr note create <ID> -m "<body>"
-```
+The script builds the JSON payload, posts the inline discussion via `glab api`, and falls back to a file-level note if inline positioning fails.
