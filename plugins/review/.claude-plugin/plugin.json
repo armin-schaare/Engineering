@@ -1,7 +1,7 @@
 {
   "name": "review",
   "description": "review related commands/skills",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": {
     "name": "Armin Schaare",
     "email": "armin.schaare@itemis.com"

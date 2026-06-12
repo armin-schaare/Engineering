@@ -1,7 +1,7 @@
 {
   "name": "caveman",
   "description": "enable caveman mode by default",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": {
     "name": "Armin Schaare",
     "email": "armin.schaare@itemis.com"
@@ -12,7 +12,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "find ~/.claude/plugins/cache -path '*/caveman/*/commands/caveman.md' | sort -V | tail -1 | xargs -I{} cat {}"
+            "command": "find ~/.claude/plugins/cache -path '*/caveman/*/skills/caveman/SKILL.md' | sort -V | tail -1 | xargs -I{} cat {}"
           }
         ]
       }
