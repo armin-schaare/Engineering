@@ -10,11 +10,7 @@ description: >
   the review-technical skill for that instead). The /review-technical command
   always triggers this skill.
 allowed-tools:
-  - Bash(git branch *)
-  - Bash(git symbolic-ref *)
-  - Bash(git log *)
-  - Bash(git diff *)
-  - Bash(git ls-files *)
+  - Bash(git *)
   - AskUserQuestion
   - Agent(review:tech)
 ---

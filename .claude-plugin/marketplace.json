@@ -21,7 +21,7 @@
     {
       "name": "review",
       "description": "Code review related skills",
-      "version": "1.0.3",
+      "version": "1.0.8",
       "author": {
         "name": "Armin Schaare",
         "email": "armin.schaare@itemis.com"
