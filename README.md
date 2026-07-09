@@ -1,6 +1,6 @@
 # itemis Claude-Plugins: Engineering
 
-Claude Code skills for daily development/engineering workflows — source control, code review, and token-efficient communication.
+Claude Code skills for daily development/engineering workflows — source control and code review.
 
 - [Installation](#installation)
 - [What It Does](#what-it-does)
@@ -19,14 +19,12 @@ For the general installation workflow, see the [commons README](https://gitlab.c
 ```shell
 /plugin install git@engineering
 /plugin install review@engineering
-/plugin install caveman@engineering
 ```
 
 ## What It Does
 
 - **Source control** — draft conventional commit messages from staged or unstaged changes
 - **Code review** — technically focused code review with configurable scope (branch diff, commit range, specific paths); optionally post inline comments to GitLab MRs
-- **Caveman mode** — ultra-compressed communication that cuts token usage ~75% while keeping full technical accuracy
 
 ## Skills
 
@@ -42,12 +40,6 @@ For the general installation workflow, see the [commons README](https://gitlab.c
 | --- | --- |
 | `/review-technical` | Technically focused code review with configurable scope: branch diff vs main, commit range, specific paths/feature, or whole project. Activates when the user asks to review code, check changes, or sanity-check a diff. |
 | `/submit-suggestions` | Post review findings as inline comments on a GitLab merge request, one at a time with user confirmation. Activates when the user wants to push review results to an MR. |
-
-### Productivity
-
-| Skill | Description |
-| --- | --- |
-| `caveman` | Ultra-compressed communication mode. Cuts token usage ~75% by dropping filler, articles, and pleasantries while keeping full technical accuracy. Activates when the user says "caveman mode" or invokes `/caveman`. |
 
 ## Contributing
 

@@ -29,18 +29,6 @@
       "source": "./plugins/review",
       "category": "productivity",
       "keywords": ["review", "qa"]
-    },
-    {
-      "name": "caveman",
-      "description": "Enable caveman mode by default",
-      "version": "1.0.4",
-      "author": {
-        "name": "Armin Schaare",
-        "email": "armin.schaare@itemis.com"
-      },
-      "source": "./plugins/caveman",
-      "category": "productivity",
-      "keywords": ["token", "brevity"]
     }
   ]
 }
